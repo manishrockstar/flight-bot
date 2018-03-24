@@ -1,0 +1,16 @@
+---
+declared-services:
+  conversation-service:
+    label: conversation
+    plan: free
+  cloudantNoSQLDB-service:
+    label: cloudantNoSQLDB
+    plan: Shared
+applications:
+- services:
+  - conversation-service
+  - cloudantNoSQLDB-service
+  name: FlighterBot
+  command: npm start
+  path: .
+  memory: 1024M
